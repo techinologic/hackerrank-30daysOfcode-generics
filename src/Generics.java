@@ -30,10 +30,12 @@ public class Generics {
             stringArray[i] = scanner.next();
         }
 
-        Printer<Integer> intPrinter = new Printer<Integer>();
-        Printer<String> stringPrinter = new Printer<String>();
+        Printer<Integer> intPrinter = new Printer<T>();
+        Printer<String> stringPrinter = new Printer<>();
+
         intPrinter.printArray(intArray);
         stringPrinter.printArray(stringArray);
+
         if (Printer.class.getDeclaredMethods().length > 1) {
             System.out.println("The Printer class should only have 1 method named printArray.");
         }
